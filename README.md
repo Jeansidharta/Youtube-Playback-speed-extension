@@ -18,7 +18,7 @@ You can either install from the [chrome web store](https://chrome.google.com/web
 
 - download this repository and unzip it.
 
-- in your chrome broswer, open the options menu (three dots at the top right of your screen)->more tools->extensions
+- in your chrome browser, open the options menu (three dots at the top right of your screen)->more tools->extensions
 
 - check the "developer options" button at the top right of the screen. This will open a menu at the top of your screen.
 
