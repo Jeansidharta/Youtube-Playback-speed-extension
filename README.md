@@ -1,10 +1,10 @@
 # About
 
-This is a chrome browser extension designed to allow a finer control of the playback speed of youtube videos. It was made using the [chrome extensions API](https://developer.chrome.com/extensions).
+This is a chrome browser extension designed to allow a finer control of the playback speed of youtube or Udemy videos. It was made using the [chrome extensions API](https://developer.chrome.com/extensions).
 
 # The interface
 
-If the current tab is not a Youtube video, the extension icon will appear grayed-out and will be disabled. Otherwise, clicking it will display a pop-up with a number, a slider and a button named "reset":
+If the current tab is not a Youtube or Udemy video, the extension icon will appear grayed-out and will be disabled. Otherwise, clicking it will display a pop-up with a number, a slider and a button named "reset":
 
 - The number displays the current video speed. It will change according to the slider. If you desire a specific speed, you may manually type the number you want. It's maximum precision, however is of 0.1. More decimal numbers will be rounded.
 

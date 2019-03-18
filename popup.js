@@ -3,7 +3,7 @@ let slider = document.getElementById("playbackSlider");
 let resetButton = document.getElementById("resetButton");
 
 const lowerPlaybackLimit = 0;
-const upperPlaybackLimit = 15.9;
+const upperPlaybackLimit = 16;
 
 //speed is float
 function setSpeed(speed){
@@ -20,16 +20,16 @@ function getPlaybackSpeed(){
          setTimeout(getPlaybackSpeed, 100);
          return;
       }
-      chrome.tabs.sendMessage(tabs[0].id, {"message" : "get playback speed"}, undefined, (response)=>{
-         if(response === undefined){
-            console.error(chrome.runtime.lastError.message);
-            return;
-         }
-         setSpeed(response.speed);
-      });
+      chrome.tabs.sendMessage(tabs[0].id, {"message" : "get playback speed"});
    });
 }
 getPlaybackSpeed();
+
+chrome.runtime.onMessage.addListener((request, sender, sendResponse)=>{
+   if(request.message == "current speed"){
+      setSpeed(request.speed);
+   }
+});
 
 resetButton.addEventListener("click", ()=>{
    setSpeed(1.0);
